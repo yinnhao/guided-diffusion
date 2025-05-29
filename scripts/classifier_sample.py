@@ -5,7 +5,8 @@ process towards more realistic images.
 
 import argparse
 import os
-
+import sys
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import numpy as np
 import torch as th
 import torch.distributed as dist
@@ -116,8 +117,8 @@ def create_argparser():
         num_samples=10000,
         batch_size=16,
         use_ddim=False,
-        model_path="",
-        classifier_path="",
+        model_path="./models/64x64_diffusion.pt",
+        classifier_path="./models/64x64_classifier.pt",
         classifier_scale=1.0,
     )
     defaults.update(model_and_diffusion_defaults())

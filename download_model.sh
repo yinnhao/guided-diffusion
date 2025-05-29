@@ -1,0 +1,2 @@
+# wget https://openaipublic.blob.core.windows.net/diffusion/jul-2021/64x64_classifier.pt
+wget https://openaipublic.blob.core.windows.net/diffusion/jul-2021/64x64_diffusion.pt -O ./models/64x64_diffusion.pt
